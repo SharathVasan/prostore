@@ -31,7 +31,7 @@ const generateThemeObject = (colors: any, mapping: any, invert = false) => {
     theme[color] = {};
     Object.entries(mapping).forEach(([key, value]: any) => {
       const shadeKey = invert ? value : key;
-      theme[color][key] = colors[colors][shadeKey];
+      theme[color][key] = colors[color][shadeKey];
     });
   });
   return theme;
